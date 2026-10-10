@@ -430,6 +430,28 @@ const MIRROR_STORAGE_KEY = "stratagem-mirror-v2";
 const LEGACY_MIRROR_STORAGE_KEY = "stratagem-mirror";
 const LEGACY_REVERSED_QUESTION_INDEXES = new Set([34, 35, 39, 40, 41, 42, 44]);
 
+function getReflectionInterpretation(dimension: string, average: number, answered: number) {
+  const reflection = STUDY[dimension]?.reflection ?? "This area may be worth paying attention to.";
+
+  if (average >= 3.3) {
+    return `This pattern appears frequently in your responses. ${reflection} In practice, it may help to notice the trigger, slow the decision, and check whether your response is being shaped by pressure, urgency, or social pull rather than by your own clearer judgment.`;
+  }
+
+  if (average >= 2.1) {
+    return `This pattern appears moderately in your responses. ${reflection} It may be strongest during stress, relationship tension, or time pressure, so adding a brief pause or clearer boundary is likely to be useful.`;
+  }
+
+  if (average >= 1.5) {
+    return `This pattern appears only a little in your responses. ${reflection} It may show up in specific situations rather than as a general pattern, which makes it a useful cue to watch without treating it as a fixed identity.`;
+  }
+
+  if (answered > 0) {
+    return `This pattern appears relatively low in your responses. ${reflection} That suggests it is not a dominant pattern right now, though it can still become relevant under particular stress, dependence, or relationship conditions.`;
+  }
+
+  return `This area is unassessed right now. ${reflection}`;
+}
+
 function Mirror() {
   const [a, setA] = useState<number[]>(Array(Q.length).fill(0));
   const [shown, setShown] = useState(false);
@@ -464,11 +486,13 @@ function Mirror() {
   const dims = Object.keys(STUDY).flatMap((d) => {
     const idx = Q.map((q, i) => (q.dim === d && a[i] > 0 ? i : -1)).filter((i) => i >= 0);
     if (!idx.length) return [];
+    const averageValue = idx.reduce((sum, i) => sum + a[i], 0) / idx.length;
     return {
       d,
       answered: idx.length,
       total: Q.filter((q) => q.dim === d).length,
-      average: (idx.reduce((sum, i) => sum + a[i], 0) / idx.length).toFixed(1),
+      average: averageValue.toFixed(1),
+      averageValue,
     };
   });
   const complete = answered === Q.length;
@@ -614,7 +638,7 @@ function Mirror() {
               diagnosis. Unanswered items are left out.
             </p>
           </div>
-          {dims.map(({ d, answered: dimensionAnswered, total, average }) => (
+          {dims.map(({ d, answered: dimensionAnswered, total, average, averageValue }) => (
             <div key={d} className="rounded-lg border border-border bg-card p-4">
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <h3 className="font-medium">{d}</h3>
@@ -622,7 +646,9 @@ function Mirror() {
                   Average response: {average}/4 ({dimensionAnswered}/{total} answered)
                 </span>
               </div>
-              <p className="mt-2 text-sm text-muted-foreground">{STUDY[d]?.reflection}</p>
+              <p className="mt-2 text-sm text-muted-foreground">
+                {getReflectionInterpretation(d, averageValue, dimensionAnswered)}
+              </p>
               <p className="mt-1 text-sm">
                 Explore:{" "}
                 <Link
