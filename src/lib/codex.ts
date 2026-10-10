@@ -1618,6 +1618,696 @@ export const PATTERNS: Pattern[] = [
     related: ["linguistic-microtechniques", "gaslighting", "double-bind"],
   },
   {
+    slug: "reverse-psychology",
+    name: "Reverse Psychology",
+    domain: "Manipulation",
+    signature:
+      "A person encourages the opposite of what they actually want, assuming the target will resist and therefore choose the desired option.",
+    mechanism:
+      "Reverse psychology relies on reactance: when choice is framed as threatened or constrained, people often feel a stronger pull to restore freedom by doing the thing they were told not to do. The tactic only works when the target is motivated by autonomy, identity, and the sense that their choice is being controlled.",
+    seen: "'Don't do this', 'I dare you to ignore me', 'just prove me wrong', coercive challenge framing, forbidden-choice baiting.",
+    counters: [
+      "Notice whether the pressure is being framed as a dare, challenge, or threat to freedom",
+      "Ask whether the advice is empowering autonomy or merely creating a harder push",
+      "Separate the target's emotional reaction from the underlying evidence and the actual goal",
+    ],
+    sources: [
+      "Brehm, J. W. — A Theory of Psychological Reactance",
+      "Steindl et al. (2015) — Understanding psychological reactance",
+      "Unpublished practitioner observation; a practical application of reactance dynamics, not a single universal doctrine",
+    ],
+    related: ["psychological-reactance", "backwards-law-persuasion", "commitment-consistency"],
+    knowledge: {
+      epistemicKind: "research-construct",
+      status: "context-dependent",
+      claims: [],
+      context: [
+        "The pattern is most relevant when autonomy is salient and the target values choice, control, or identity.",
+        "It is not a standalone explanation for all persuasion; reactance varies with the person, the threat to freedom, and the social context.",
+      ],
+      contextFactors: {
+        ageAndDevelopment: ["Adolescents and people with high autonomy needs may respond more strongly."],
+        individualDifferences: ["Sensitivity to control, independence, and status can change the effect."],
+        situation: ["High-pressure framing, challenge, and explicit prohibition tend to increase reactance."]
+      },
+      alternativeExplanations: [
+        "The person may simply be testing limits, expressing frustration, or using a social challenge rather than intentionally invoking reactance.",
+        "A person's compliance may also reflect identity, conformity, or social reward rather than direct reverse-psychology effects.",
+      ],
+      ethicalConsiderations: [
+        "Do not treat reverse psychology as a harmless or reliable tool; it can escalate control dynamics and manipulation.",
+        "Use direct, transparent communication whenever possible and avoid exploiting autonomy threats.",
+      ],
+      levelsOfAnalysis: ["individual", "interpersonal", "group"],
+    },
+  },
+  {
+    slug: "illusion-of-choice",
+    name: "The Illusion of Choice",
+    domain: "Manipulation",
+    signature:
+      "A person presents a constrained decision as though it were broad and freely chosen.",
+    mechanism:
+      "By framing the options in a way that hides the real constraints, the actor makes compliance feel voluntary and self-directed. Choice is psychologically satisfying even when the decision space was already narrowed by pressure, authority, or context.",
+    seen: "'You can choose either A or B' while one option is clearly the preferred outcome, curated menus, public narratives that disguise coercive constraints.",
+    counters: [
+      "Ask what alternatives were excluded and why",
+      "Separate the feeling of freedom from the actual decision architecture",
+      "Look past the framing to the incentives, constraints, and hidden costs",
+    ],
+    sources: ["Behavioral economics and autonomy literature", "Unpublished practitioner observation"],
+    related: ["reverse-psychology", "strategic-ambiguity", "baiting"],
+  },
+  {
+    slug: "false-binary-disruption",
+    name: "False-Binary Disruption",
+    domain: "Manipulation",
+    signature:
+      "A person reframes a complex issue as a forced binary and then introduces a destabilising implication that undermines the target's agency.",
+    mechanism:
+      "False binaries reduce tolerance for ambiguity and push people into a simplified judgment. Once the choice is reduced to 'either/or,' the manipulator can cast dissent as irrational or morally compromised.",
+    seen: "'You are either with us or against us', moral absolutes, false dichotomies in conflict, debates, or political framing.",
+    counters: [
+      "Ask what important dimensions are being omitted",
+      "Look for third options, gradations, or distinctions that the binary hides",
+      "Do not accept a forced binary without testing the assumptions behind it",
+    ],
+    sources: ["Social psychology on categorisation and false dichotomies", "Unpublished practitioner observation"],
+    related: ["illusion-of-choice", "antithesis", "appeal-to-neutrality"],
+  },
+  {
+    slug: "strategic-ambiguity",
+    name: "Strategic Ambiguity",
+    domain: "Communication",
+    signature:
+      "A speaker deliberately leaves a message vague enough to absorb multiple interpretations while preventing clear accountability.",
+    mechanism:
+      "Ambiguity creates room for plausible deniability. The target remains uncertain, and the speaker maintains flexibility, moral cover, or indirect influence without committing to a direct claim.",
+    seen: "Evasive promises, vague apologetic language, legalistic wording, coded political phrasing, and messages that sound meaningful but avoid clear action.",
+    counters: [
+      "Ask for specifics, deadlines, and measurable commitments",
+      "Separate rhetorical flexibility from genuine clarity",
+      "Notice when ambiguity is used to avoid responsibility rather than to preserve nuance",
+    ],
+    sources: ["Rhetoric and communication theory", "Unpublished practitioner observation"],
+    related: ["equivocation", "omission-and-selective-disclosure", "implication-and-insinuation"],
+  },
+  {
+    slug: "poison-metaphor",
+    name: "The Poison Metaphor",
+    domain: "Manipulation",
+    signature:
+      "A person frames an idea, person, or action as toxic, poisonous, or corrupting to induce revulsion without evidence.",
+    mechanism:
+      "Metaphorical contamination turns a controversy into a moral hazard; the target is pushed to reject or condemn without careful analysis. The metaphor can function as emotion-laden shorthand that suppresses nuance.",
+    seen: "Calling a policy 'poison', an idea 'toxic', a group 'contaminated', or a disagreement 'corrupting'.",
+    counters: [
+      "Translate the metaphor back into concrete claims and effects",
+      "Ask whether the label is doing analytical work or only emotive work",
+      "Separate moral condemnation from evidence-based assessment",
+    ],
+    sources: ["Language and framing literature", "Unpublished practitioner observation"],
+    related: ["euphemism-and-dysphemism", "narrative-persuasion", "out-group-derogation"],
+  },
+  {
+    slug: "intellectual-signaling",
+    name: "Intellectual Signaling",
+    domain: "Social Psychology",
+    signature:
+      "A person displays sophistication, complexity, or insider status to create status and credibility without necessarily increasing the quality of the argument.",
+    mechanism:
+      "Signal-heavy language communicates status and exclusion. The audience may respond to the social display of intelligence rather than to the actual validity or evidential support of the point.",
+    seen: "Technical jargon, jargon-heavy posturing, insider references, and elite-appeal framing used to dominate rather than clarify.",
+    counters: [
+      "Identify whether the substance supports the claim or the status display is carrying it",
+      "Ask for plain-language restatement and an evidence trail",
+      "Notice whether complexity is obscuring rather than clarifying",
+    ],
+    sources: ["Status signaling and social cognition literature", "Unpublished practitioner observation"],
+    related: ["name-dropping", "prestige-signaling", "appeal-to-neutrality"],
+  },
+  {
+    slug: "minimization",
+    name: "Minimization",
+    domain: "Manipulation",
+    signature:
+      "A person downplays the seriousness, impact, or relevance of an issue to reduce urgency or accountability.",
+    mechanism:
+      "Minimization can quiet concern and lower resistance by reframing a problem as minor, exaggerated, or not worth attention. The technique works because people often defer to the person assigning the emotional scale.",
+    seen: "'It's not a big deal', 'you're overreacting', 'it was harmless', 'it doesn't matter' in response to clear harms or signs of distress.",
+    counters: [
+      "Ask whether the lowered stakes are being asserted or evidenced",
+      "Check whether the minimizer is avoiding accountability rather than clarifying impact",
+      "Separate the language of dismissal from the actual facts and consequences",
+    ],
+    sources: ["Psychology of denial and rationalisation literature", "Unpublished practitioner observation"],
+    related: ["catastrophizing", "emotional-blackmail", "stonewalling"],
+  },
+  {
+    slug: "horn-effect",
+    name: "Horn Effect",
+    domain: "Social Psychology",
+    signature:
+      "A single negative impression causes a person to attribute additional negative qualities or motives to someone.",
+    mechanism:
+      "Once a target is tagged as undesirable or untrustworthy, subsequent evidence is interpreted through that frame. The negative impression becomes a halo of suspicion rather than an isolated fact.",
+    seen: "A single lie, failure, or flaw is used to label a person untrustworthy altogether, or an entire group is judged by one bad example.",
+    counters: [
+      "Separate the initial negative signal from the broader interpretation",
+      "Look for evidence beyond the first impression or the single anecdote",
+      "Do not convert one bad example into a total verdict without context",
+    ],
+    sources: ["Social perception and impression formation literature", "Unpublished practitioner observation"],
+    related: ["straw-manning", "out-group-derogation", "baiting"],
+  },
+  {
+    slug: "priming",
+    name: "Priming",
+    domain: "Cognition & Bias",
+    signature:
+      "Exposure to a cue or idea shapes the interpretation of later information without the target explicitly noticing the influence.",
+    mechanism:
+      "Earlier stimuli can increase the accessibility of certain ideas, emotions, or frames. This does not mean the person is being controlled, but it means context can quietly bias perception and choice.",
+    seen: "Repeated words, images, themes, or environment cues that make a later message feel more relevant, urgent, or familiar.",
+    counters: [
+      "Notice the framing environment before evaluating the content itself",
+      "Check whether the message is persuasive because of evidence or because of the surrounding cue",
+      "Create an alternative frame before deciding what the message means",
+    ],
+    sources: ["Cognitive psychology and priming literature", "Unpublished practitioner observation"],
+    related: ["narrative-persuasion", "presupposition", "rhetorical-questions"],
+  },
+  {
+    slug: "catastrophizing",
+    name: "Catastrophizing",
+    domain: "Cognition & Bias",
+    signature:
+      "A person treats a small or uncertain problem as if it guarantees a devastating outcome.",
+    mechanism:
+      "The mind amplifies the worst plausible interpretation and treats it as the likely outcome. This can intensify fear, urgency, and compliance because the apparent risk feels uncontrollable.",
+    seen: "'If I say no, everything falls apart', 'this will ruin everything', 'we are doomed if this happens'.",
+    counters: [
+      "State the actual risk, likelihood, and consequences explicitly",
+      "Separate the feared outcome from the likely one",
+      "Ask what evidence supports the catastrophic interpretation and what evidence does not",
+    ],
+    sources: ["Cognitive distortion and anxiety literature", "Unpublished practitioner observation"],
+    related: ["minimization", "fear-based-framing", "emotional-blackmail"],
+  },
+  {
+    slug: "foot-in-the-door-technique",
+    name: "Foot-in-the-Door Technique",
+    domain: "Persuasion",
+    signature:
+      "A small initial request makes a larger request easier to accept later.",
+    mechanism:
+      "People often want to remain consistent with earlier choices, especially when the initial request has already been accepted. The small step creates a sense of identity or commitment that makes subsequent compliance feel more natural.",
+    seen: "A minor concession is requested before a larger ask, used in sales, campaigns, and interpersonal pressure.",
+    counters: [
+      "Decide in advance what your threshold for agreement is",
+      "Refuse to treat a small yes as a commitment to a larger one",
+      "Notice when the initial request is creating a compliance trap",
+    ],
+    sources: ["Compliance and persuasion literature", "Unpublished practitioner observation"],
+    related: ["door-in-the-face-technique", "commitment-consistency", "low-ball-technique"],
+  },
+  {
+    slug: "door-in-the-face-technique",
+    name: "Door-in-the-Face Technique",
+    domain: "Persuasion",
+    signature:
+      "A large request is made first, then reduced to a smaller request that seems more reasonable by comparison.",
+    mechanism:
+      "The larger ask can make the later smaller one feel like a concession or moral win. The target may feel more generous or less defensive after rejecting the initial extreme demand.",
+    seen: "Big ask followed by a softer ask, common in negotiation, fundraising, and pressure campaigns.",
+    counters: [
+      "Consider the initial request as a tactic, not a genuine standard",
+      "Do not let a later smaller ask feel like a moral obligation because of the first ask",
+      "Negotiate on the merits rather than the contrast effect",
+    ],
+    sources: ["Compliance and persuasion literature", "Unpublished practitioner observation"],
+    related: ["foot-in-the-door-technique", "low-ball-technique", "commitment-consistency"],
+  },
+  {
+    slug: "low-ball-technique",
+    name: "Low-Ball Technique",
+    domain: "Persuasion",
+    signature:
+      "A person secures agreement to a good deal, then introduces later costs, constraints, or obligations that were not part of the original commitment.",
+    mechanism:
+      "Once the target has invested in the decision, they are more likely to continue, even after new costs emerge. The technique exploits commitment and sunk-cost reasoning.",
+    seen: "Sales tactics that lock in an initial agreement before hidden costs or conditions appear.",
+    counters: [
+      "Ask for the full cost, constraints, and obligations before agreeing",
+      "Do not treat an early agreement as final without a clear completion checklist",
+      "Pause before deciding when new costs appear after initial acceptance",
+    ],
+    sources: ["Compliance and persuasion literature", "Unpublished practitioner observation"],
+    related: ["foot-in-the-door-technique", "door-in-the-face-technique", "sunk-cost"],
+  },
+  {
+    slug: "mere-exposure-effect",
+    name: "Mere-Exposure Effect",
+    domain: "Cognition & Bias",
+    signature:
+      "Repeated exposure to a stimulus increases liking for it, even when the exposure itself is not meaningful or persuasive.",
+    mechanism:
+      "Familiarity reduces uncertainty and can create a preference for what feels safe or known. Repetition can be a subtle persuasion tool, especially when the message is repeated without critical evaluation.",
+    seen: "Repeated branding, slogans, social media repetition, political messaging, and background repetition of a claim.",
+    counters: [
+      "Ask whether the positive feeling comes from evidence or familiarity alone",
+      "Pause and evaluate a claim before it has become emotionally familiar",
+      "Do not confuse repeated exposure with truth or quality",
+    ],
+    sources: ["Learning and attitude formation literature", "Unpublished practitioner observation"],
+    related: ["priming", "narrative-persuasion", "repetition"],
+  },
+  {
+    slug: "narrative-persuasion",
+    name: "Narrative Persuasion",
+    domain: "Communication",
+    signature:
+      "A compelling story shapes belief and motivation by making abstract issues emotional, concrete, and memorable.",
+    mechanism:
+      "Narratives can bypass analytical resistance byembedding emotional context, identity, and moral meaning. A persuasive story often works through transport, memory, and identification rather than through formal evidence alone.",
+    seen: "Hero-villain framing, personal testimonials, emotionally curated stories, mobilising narratives in activism and propaganda.",
+    counters: [
+      "Separate the emotional impact of the story from the underlying evidence",
+      "Check whether the story is a valid exemplar or merely an emotionally loaded anecdote",
+      "Ask what broader data or counterexample is being omitted",
+    ],
+    sources: ["Narrative psychology and persuasion literature", "Unpublished practitioner observation"],
+    related: ["priming", "euphemism-and-dysphemism", "naming-pattern"],
+  },
+  {
+    slug: "inoculation",
+    name: "Inoculation",
+    domain: "Communication",
+    signature:
+      "A person prepares the target to resist persuasion by exposing them to weak counter-arguments before stronger ones appear.",
+    mechanism:
+      "Inoculation works by building mental antibodies against later manipulation: if the target already has a refutation in mind, a later message is easier to resist or evaluate critically.",
+    seen: "Pre-bunking, challenge-based education, myth-busting, and a deliberate warning about persuasive techniques before they are used.",
+    counters: [
+      "Use the technique to strengthen critical reflection rather than entrench defensiveness",
+      "Teach people to examine the structure of arguments, not only the speaker's reputation",
+      "Balance resistance with curiosity so that counter-arguments do not become dogma",
+    ],
+    sources: ["Inoculation theory and persuasion research", "Unpublished practitioner observation"],
+    related: ["false-binary-disruption", "rhetorical-questions", "appeal-to-neutrality"],
+  },
+  {
+    slug: "implication-and-insinuation",
+    name: "Implication & Insinuation",
+    domain: "Communication",
+    signature:
+      "A speaker communicates an idea indirectly, leaving the listener to infer meaning, suspicion, or guilt without the speaker outright stating it.",
+    mechanism:
+      "Indirect messaging allows the speaker to achieve persuasive or damaging effects while preserving deniability. The target must infer the accusation, which can feel more intimate and harder to challenge.",
+    seen: "Veiled accusations, coded insinuations, guilt-laden hints, and 'you know what I mean' communication.",
+    counters: [
+      "Ask the speaker to state the claim directly and explicitly",
+      "Separate insinuation from evidence",
+      "Do not accept hidden meaning as a substitute for clear facts",
+    ],
+    sources: ["Rhetoric and interpersonal communication literature", "Unpublished practitioner observation"],
+    related: ["presupposition", "stonewalling", "strategic-ambiguity"],
+  },
+  {
+    slug: "presupposition",
+    name: "Presupposition",
+    domain: "Communication",
+    signature:
+      "A statement is framed so that an unspoken assumption is treated as if it is already true.",
+    mechanism:
+      "Presuppositions can quietly move the audience toward a conclusion by embedding background assumptions inside an otherwise neutral sentence. This makes disagreement feel like fighting the wording rather than the idea itself.",
+    seen: "'When are you going to admit you're wrong?', 'As you know, this is a failed policy', 'You still can't trust them.'",
+    counters: [
+      "Identify the hidden assumption before replying to the surface claim",
+      "Ask whether the presupposition is itself supported or merely assumed",
+      "Separate the question from the assumption that makes it persuasive",
+    ],
+    sources: ["Linguistics and discourse analysis literature", "Unpublished practitioner observation"],
+    related: ["rhetorical-questions", "implication-and-insinuation", "priming"],
+  },
+  {
+    slug: "rhetorical-questions",
+    name: "Rhetorical Questions",
+    domain: "Communication",
+    signature:
+      "A question is asked in a way that suggests the answer is obvious or predetermined, steering the audience without genuine inquiry.",
+    mechanism:
+      "The question creates a conversational frame where the audience is invited to supply a preferred answer. This can win emotional assent and moral closure without allowing any actual debate or evidence review.",
+    seen: "'Who could object to that?', 'What reasonable person would agree?', 'If not now, when?'",
+    counters: [
+      "Treat the question as an argument, not as genuine curiosity",
+      "Ask what answer would actually be allowed if the audience answered honestly",
+      "Examine the assumptions embedded in the question itself",
+    ],
+    sources: ["Rhetoric and persuasion literature", "Unpublished practitioner observation"],
+    related: ["presupposition", "antithesis", "inoculation"],
+  },
+  {
+    slug: "antithesis",
+    name: "Antithesis",
+    domain: "Communication",
+    signature:
+      "A speaker contrasts two opposing positions to make one sound morally or intellectually superior by default.",
+    mechanism:
+      "Antithesis simplifies complexity into a stark moral contrast. The target is invited to choose the more acceptable side without examining nuance, trade-offs, or shared ground.",
+    seen: "'Reason or emotion', 'order or chaos', 'truth or ideology' as emotionally charged public framing.",
+    counters: [
+      "Look for the omitted middle ground and trade-offs",
+      "Ask whether the contrast is actually a false binary or a real distinction",
+      "Test whether the speaker is using contrast as a shortcut to persuasion",
+    ],
+    sources: ["Rhetoric and framing literature", "Unpublished practitioner observation"],
+    related: ["false-binary-disruption", "paradox", "rhetorical-questions"],
+  },
+  {
+    slug: "paradox",
+    name: "Paradox",
+    domain: "Communication",
+    signature:
+      "A statement appears to contain mutually contradictory ideas that are then used to create a sense of depth, authority, or intellectual superiority.",
+    mechanism:
+      "Paradox grabs attention by seeming impossibly smart or profound, but it can also hide weak reasoning behind complexity. It functions as a performance of insight, not necessarily as a valid argument.",
+    seen: "'The only way to be free is to submit to the process', 'we must destroy the system to save it' in a rhetorical context.",
+    counters: [
+      "Translate the paradox into plain terms and test its actual logic",
+      "Ask whether the paradox hides an unexamined assumption",
+      "Do not treat mysterious complexity as proof of wisdom",
+    ],
+    sources: ["Philosophy and rhetoric literature", "Unpublished practitioner observation"],
+    related: ["antithesis", "backwards-law-persuasion", "strategic-ambiguity"],
+  },
+  {
+    slug: "euphemism-and-dysphemism",
+    name: "Euphemism & Dysphemism",
+    domain: "Language & Framing",
+    signature:
+      "A person uses softened or harsh language to shape emotional reactions and moral judgments without openly naming the underlying reality.",
+    mechanism:
+      "Euphemisms make harmful or coercive actions sound acceptable, while dysphemisms make ordinary actions sound repulsive. Both rely on emotional framing rather than precise description.",
+    seen: "'Collateral damage' versus 'mass killing', 'restructuring' versus 'downsizing', 'ethically flexible' versus 'corrupt'.",
+    counters: [
+      "Translate the phrase into neutral, concrete terms",
+      "Ask what actual behaviour or consequence is being hidden or embellished",
+      "Notice whether the wording is controlling your moral response before you have the facts",
+    ],
+    sources: ["Language, ethics, and framing literature", "Unpublished practitioner observation"],
+    related: ["poison-metaphor", "narrative-persuasion", "omission-and-selective-disclosure"],
+  },
+  {
+    slug: "omission-and-selective-disclosure",
+    name: "Omission & Selective Disclosure",
+    domain: "Manipulation",
+    signature:
+      "A person controls the story by leaving out decisive facts, context, or contradictions while presenting a partial account as complete.",
+    mechanism:
+      "Selective disclosure can be more persuasive than direct falsehood because the audience is left with a neat but incomplete picture. People often evaluate the tone and structure of the account rather than noticing what was excluded.",
+    seen: "Strategic silence, cherry-picking evidence, partial summaries, and framing a narrative around convenient facts while excluding a decisive counterexample.",
+    counters: [
+      "Ask what information is missing and what the speaker is avoiding",
+      "Seek independent sources and time-ordered facts",
+      "Do not accept a partial account as a complete one",
+    ],
+    sources: ["Decision and evidence quality literature", "Unpublished practitioner observation"],
+    related: ["strategic-ambiguity", "euphemism-and-dysphemism", "baiting"],
+  },
+  {
+    slug: "steel-manning-and-straw-manning",
+    name: "Steel-Manning & Straw-Manning",
+    domain: "Argumentation",
+    signature:
+      "A person either strengthens an opponent's argument to make it easier to defeat or weakens it into a caricature to win the exchange.",
+    mechanism:
+      "The technique shifts debate away from the actual issue. Straw-manning reduces complexity into a ridiculous version; steel-manning can feel impressive but may still distract from the strongest honest version of the claim.",
+    seen: "Reducing a complicated argument to an absurd simplification, or over-idealising an opposing case before attacking it.",
+    counters: [
+      "Separate the actual arguments from the rhetorical framing of them",
+      "Test both the strongest and weakest formulations of the case",
+      "Do not let rhetorical performance replace actual evidence or reasoning",
+    ],
+    sources: ["Argumentation theory and debate literature", "Unpublished practitioner observation"],
+    related: ["horn-effect", "antithesis", "equivocation"],
+  },
+  {
+    slug: "equivocation",
+    name: "Equivocation",
+    domain: "Communication",
+    signature:
+      "A speaker uses a word or phrase with more than one meaning to make a claim sound more stable than it is.",
+    mechanism:
+      "The ambiguity shifts between definitions to preserve plausible deniability while staying emotionally persuasive. The audience is encouraged to move between meanings without noticing the slide.",
+    seen: "Using 'fair', 'neutral', 'security', or 'freedom' in ways that shift between moral and practical meanings.",
+    counters: [
+      "Ask for the precise definition of each key term",
+      "Pin the speaker to a specific meaning before evaluating the claim",
+      "Do not allow slides between meanings to hide the actual conclusion",
+    ],
+    sources: ["Logic and rhetoric literature", "Unpublished practitioner observation"],
+    related: ["strategic-ambiguity", "appeal-to-neutrality", "definitional-dodge"],
+  },
+  {
+    slug: "appeal-to-neutrality",
+    name: "The Appeal to Neutrality",
+    domain: "Manipulation",
+    signature:
+      "A person treats a perspective as objective or neutral merely because it is emotionally detached, familiar, or institutionally sanctioned.",
+    mechanism:
+      "Neutrality is made to function like evidence; the audience is encouraged to trust the frame without testing the assumptions behind it. The result is a false sense that the view is unmotivated or apolitical.",
+    seen: "'We are just being objective', 'this is not political', 'we're above partisanship' when a value-laden frame is being defended.",
+    counters: [
+      "Ask what assumptions or interests are being hidden behind the claim to neutrality",
+      "Notice whether neutrality is being used as a shield rather than as a method",
+      "Look for power, incentives, and framing before accepting the label of objectivity",
+    ],
+    sources: ["Critical theory, media studies, and epistemology literature", "Unpublished practitioner observation"],
+    related: ["intellectual-signaling", "equivocation", "inoculation"],
+  },
+  {
+    slug: "out-group-derogation",
+    name: "Out-Group Derogation",
+    domain: "Social Psychology",
+    signature:
+      "A group is devalued, stereotyped, or demonised to strengthen the in-group or to neutralise moral concern about harmful behaviour.",
+    mechanism:
+      "By constructing a target out-group as dangerous, lazy, corrupt, or unworthy, the speaker lowers the bar for hostility or exclusion. The target can be portrayed as less fully human, which clears the way for coercive action.",
+    seen: "Stereotyping, scapegoating, dehumanising rhetoric, and identity-based contempt in conflict, politics, and institutions.",
+    counters: [
+      "Ask whether the devaluation is based on evidence or group-level prejudice",
+      "Separate fact-based criticism from identity-based contempt",
+      "Check whether the rhetoric is being used to justify exclusion or hostility",
+    ],
+    sources: ["Intergroup relations and social identity literature", "Unpublished practitioner observation"],
+    related: ["triangulation", "scapegoating", "darvo"],
+  },
+  {
+    slug: "counter-signaling",
+    name: "Counter-Signaling",
+    domain: "Social Psychology",
+    signature:
+      "A person makes a performative display of dissent or independence to signal authenticity, superiority, or distance from the mainstream.",
+    mechanism:
+      "Counter-signaling focuses attention on the speaker's difference rather than the actual content of the claim. The signal can create status because it implies courage, intelligence, or 'not being fooled'.",
+    seen: "Acting as if one is above trends, refusing obvious consensus, or performing contrarianism to seem insightful rather than accurate.",
+    counters: [
+      "Ask whether the contrary stance is supported by evidence or merely by the performance of independence",
+      "Separate independence from correctness",
+      "Do not confuse novelty with insight",
+    ],
+    sources: ["Status-signaling, identity, and social psychology literature", "Unpublished practitioner observation"],
+    related: ["intellectual-signaling", "prestige-signaling", "name-dropping"],
+  },
+  {
+    slug: "triangulation",
+    name: "Triangulation",
+    domain: "Manipulation",
+    signature:
+      "A person draws in a third party or a distant audience to create confusion, enforce loyalty, and amplify pressure without direct confrontation.",
+    mechanism:
+      "The triangulation pattern turns a direct disagreement into a relational contest. The target is pulled into defending themselves to an authority or outside observer, often while the manipulator keeps the moral narrative on their side.",
+    seen: "'Ask your friends what they think', 'everyone else agrees', 'I'm only telling the truth to the right person' in conflict.",
+    counters: [
+      "Separate the relational tactic from the underlying evidence",
+      "Ask for direct, private, and concrete discussion rather than audience-based pressure",
+      "Do not let a third-party frame substitute for a clear fact-check",
+    ],
+    sources: ["Family systems and interpersonal conflict literature", "Unpublished practitioner observation"],
+    related: ["scapegoating", "darvo", "stonewalling"],
+  },
+  {
+    slug: "scapegoating",
+    name: "Scapegoating",
+    domain: "Manipulation",
+    signature:
+      "A person redirects blame or hostility toward a convenient target to protect the speaker or the in-group from accountability.",
+    mechanism:
+      "When a shared problem or failure is uncomfortable, the speaker can assign the burden to a person or group that is easier to target. The scapegoat becomes the emotional container for a larger conflict or crisis.",
+    seen: "Blaming a minority, a subordinate, or a designated outsider for internal problems or failure.",
+    counters: [
+      "Trace the causal chain rather than accepting the assigned blame",
+      "Look for whether the target is being used as a container for another problem",
+      "Do not confuse convenient blame with evidence or accountability",
+    ],
+    sources: ["Intergroup conflict and social psychology literature", "Unpublished practitioner observation"],
+    related: ["out-group-derogation", "darvo", "triangulation"],
+  },
+  {
+    slug: "darvo",
+    name: "DARVO",
+    domain: "Manipulation",
+    signature:
+      "A person denies the behaviour, attacks the accuser, and reverses the victim and offender roles when confronted with evidence or criticism.",
+    mechanism:
+      "DARVO disrupts accountability by reframing criticism itself as an attack. The target is pushed into defending their character while the manipulator deflects responsibility and gains moral cover.",
+    seen: "'You are lying', 'you are the abusive one', 'you are making it up', 'what about your own behaviour?' in response to direct evidence.",
+    counters: [
+      "Keep attention on the specific behaviour and evidence rather than on character attacks",
+      "Separate the emotional escalation from the factual question",
+      "Document clear facts and boundaries without becoming trapped in the frame of the accusation",
+    ],
+    sources: ["Domestic abuse and coercive-control literature", "Unpublished practitioner observation"],
+    related: ["triangulation", "stonewalling", "emotional-blackmail"],
+  },
+  {
+    slug: "baiting",
+    name: "Baiting",
+    domain: "Manipulation",
+    signature:
+      "A person deliberately provokes a reaction, such as anger, shame, or fear, in order to gain leverage or to frame the target as the problem.",
+    mechanism:
+      "Baiting creates a reaction that can be used against the target. The manipulator often appears calm or self-righteous while the target is drawn into a losing emotional response.",
+    seen: "Deliberate insults, provocative comparisons, loaded questions, and moral traps designed to trigger a defensive response.",
+    counters: [
+      "Notice when a message is structured to provoke rather than communicate",
+      "Pause before responding to bait so the manipulator does not win on your emotions",
+      "Respond to the substance, not the inflammatory frame",
+    ],
+    sources: ["Interpersonal manipulation literature", "Unpublished practitioner observation"],
+    related: ["baited-response", "horn-effect", "emotional-blackmail"],
+  },
+  {
+    slug: "emotional-blackmail",
+    name: "Emotional Blackmail",
+    domain: "Manipulation",
+    signature:
+      "A person uses guilt, fear, obligation, or a threat to manipulate another person's decisions and moral boundaries.",
+    mechanism:
+      "The manipulator turns a relationship or social obligation into a debt that must be repaid through compliance. The target feels guilty or afraid to refuse, even when the demand is unfair or unsustainable.",
+    seen: "'If you loved me, you'd do this', 'I'll be devastated if you say no', 'If you don't, you'll hurt everyone'",
+    counters: [
+      "Separate the emotional pressure from the actual merits of the request",
+      "Ask what the person will do if you do not comply and whether that is a genuine consequence or a threat",
+      "Protect boundaries and seek support when guilt is being used as leverage",
+    ],
+    sources: ["Coercive relationship literature", "Unpublished practitioner observation"],
+    related: ["guilt-tripping", "catastrophizing", "darvo"],
+  },
+  {
+    slug: "name-dropping",
+    name: "Name-Dropping",
+    domain: "Status & Prestige",
+    signature:
+      "A person references influential, prestigious, or high-status connections to suggest credibility or access without making a substantive case.",
+    mechanism:
+      "The social meaning of the reference is often more persuasive than the actual content. The target may infer trust or authority from association without checking whether the connection is relevant or true.",
+    seen: "Mentioning elite friends, famous names, insider circles, or respected institutions as a shortcut to credibility.",
+    counters: [
+      "Ask whether the named connection is relevant to the actual argument",
+      "Verify the relationship and evidence rather than accepting the prestige signal",
+      "Separate reputation from reasoning",
+    ],
+    sources: ["Status signaling and social prestige research", "Unpublished practitioner observation"],
+    related: ["prestige-signaling", "intellectual-signaling", "counter-signaling"],
+  },
+  {
+    slug: "prestige-signaling",
+    name: "Prestige Signaling",
+    domain: "Status & Prestige",
+    signature:
+      "A person uses prestigious references, badges, or associations to make a claim seem more credible than it is.",
+    mechanism:
+      "Status cues can dominate reasoning because humans are sensitive to social proof, affiliation, and expensive signals. This can make an argument feel more trustworthy even when its actual evidence is weak or missing.",
+    seen: "Association with elite institutions, high-status networks, famous names, or rare credentials used to imply correctness or access.",
+    counters: [
+      "Treat the signal as a cue for verification, not as proof of truth",
+      "Check the evidence independently of the status frame",
+      "Do not confuse access or prestige with analysis or accuracy",
+    ],
+    sources: ["Status signaling and social trust literature", "Unpublished practitioner observation"],
+    related: ["name-dropping", "intellectual-signaling", "counter-signaling"],
+  },
+  {
+    slug: "conscientious-objection",
+    name: "Conscientious Objection",
+    domain: "Ethics",
+    signature:
+      "A person refuses to participate in a demand on grounds of conscience, principle, or moral objection.",
+    mechanism:
+      "Conscientious objection is an ethical stance that refuses participation based on values, not simply preference. It can be morally serious, but it can also be used rhetorically when a person wants to avoid accountability under the guise of principle.",
+    seen: "Refusal to participate in harmful or coercive activity, or invoking conscience to avoid responsibility or criticism.",
+    counters: [
+      "Differentiate principled refusal from performative self-exemption",
+      "Ask what values or harms are actually guiding the objection",
+      "Examine whether the objection is specific, consistent, and proportionate",
+    ],
+    sources: ["Ethics, political philosophy, and civil-disobedience literature", "Unpublished practitioner observation"],
+    related: ["deontological-reasoning", "pragmatism", "stonewalling"],
+  },
+  {
+    slug: "deontological-reasoning",
+    name: "Deontological Reasoning",
+    domain: "Ethics",
+    signature:
+      "A person evaluates actions by duty, principle, or moral rules rather than by outcomes alone.",
+    mechanism:
+      "This form of reasoning emphasises duties, rights, and rules. It can provide a stable moral standard, but it can also be used to hide practical trade-offs or to make a position seem superior by moral purity rather than by consequences.",
+    seen: "Arguments framed as 'it is wrong regardless of outcome', 'this violates a duty', or 'some actions are intrinsically unacceptable'.",
+    counters: [
+      "Ask what the duty is, why it applies, and whether it is being used to avoid practical scrutiny",
+      "Separate moral rules from contextual trade-offs",
+      "Examine whether the principle is applied consistently or selectively",
+    ],
+    sources: ["Ethics and moral philosophy literature", "Unpublished practitioner observation"],
+    related: ["conscientious-objection", "pragmatism", "appeal-to-neutrality"],
+  },
+  {
+    slug: "pragmatism",
+    name: "Pragmatism",
+    domain: "Ethics",
+    signature:
+      "A person judges actions by their practical consequences, usefulness, and realistic outcomes rather than by pure rules or ideals.",
+    mechanism:
+      "Pragmatism is useful for trade-offs and practical decision-making, but it can also become a dismissal of principle or a way of treating moral values as negotiable under the banner of realism.",
+    seen: "'What's the practical outcome?', 'We have to be realistic', 'The best plan is the one that works.'",
+    counters: [
+      "Ask what values are being traded off in the name of practicality",
+      "Distinguish sound practical judgment from moral abdication",
+      "Check whether the 'realism' claim is just a way to avoid confronting a principle",
+    ],
+    sources: ["Pragmatic philosophy and decision theory literature", "Unpublished practitioner observation"],
+    related: ["deontological-reasoning", "conscientious-objection", "stonewalling"],
+  },
+  {
+    slug: "stonewalling",
+    name: "Stonewalling",
+    domain: "Manipulation",
+    signature:
+      "A person refuses to engage, answer, clarify, or engage in reciprocal communication to create confusion, fatigue, or control.",
+    mechanism:
+      "Stonewalling can stall accountability, increase emotional exhaustion, and protect the speaker from direct scrutiny. It makes the target do all the work while the speaker avoids responsibility or clarity.",
+    seen: "Silent refusal, non-answers, repetitive deflection, dead-end communication, and an unwillingness to engage in actual problem-solving.",
+    counters: [
+      "Ask for concrete, time-bounded responses rather than general refusals",
+      "Separate refusal to engage from good boundary-setting",
+      "Do not keep chasing a person who is using silence as a tactic rather than a genuine limit",
+    ],
+    sources: ["Conflict communication and coercive dynamics literature", "Unpublished practitioner observation"],
+    related: ["triangulation", "darvo", "implication-and-insinuation"],
+  },
+  {
     slug: "classical-conditioning",
     name: "Classical Conditioning & Pavlovian Association",
     domain: "Cognition & Bias",
@@ -2954,6 +3644,12 @@ export const TIERS: Tier[] = [
           "linguistic-microtechniques",
           "self-disclosure-reciprocity",
           "active-listening",
+          "strategic-ambiguity",
+          "presupposition",
+          "rhetorical-questions",
+          "implication-and-insinuation",
+          "equivocation",
+          "omission-and-selective-disclosure",
         ],
         sources: [
           "[Academic chapter] Clark & Brennan (1991), “Grounding in communication,” Perspectives on Socially Shared Cognition.",
@@ -2967,7 +3663,19 @@ export const TIERS: Tier[] = [
         practice:
           "Choose a recent disagreement and rewrite it in neutral terms: claim, evidence, uncertainty, desired outcome, and repair needed. Compare the neutral version with your original narrative.",
         checkpoint: "What did the framing add to the conflict, and what did it hide?",
-        patterns: ["double-bind", "linguistic-microtechniques", "reciprocity"],
+        patterns: [
+          "double-bind",
+          "linguistic-microtechniques",
+          "reciprocity",
+          "false-binary-disruption",
+          "antithesis",
+          "paradox",
+          "euphemism-and-dysphemism",
+          "poison-metaphor",
+          "inoculation",
+          "narrative-persuasion",
+          "steel-manning-and-straw-manning",
+        ],
         sources: [
           "[Academic book] Walton & Krabbe (1995), “Commitment in Dialogue: Basic Concepts of Interpersonal Reasoning.”",
           "[Academic book] Fisher, Ury, & Patton (2011), “Getting to Yes: Negotiating Agreement Without Giving In,” 3rd edition.",
@@ -2997,6 +3705,11 @@ export const TIERS: Tier[] = [
           "psychological-safety",
           "organizational-silence",
           "procedural-justice",
+          "intellectual-signaling",
+          "counter-signaling",
+          "name-dropping",
+          "prestige-signaling",
+          "appeal-to-neutrality",
         ],
         sources: [
           "[Foundational research] French & Raven (1959), “The bases of social power,” Studies in Social Power.",
@@ -3039,6 +3752,14 @@ export const TIERS: Tier[] = [
           "social-proof",
           "scarcity",
           "psychological-reactance",
+          "reverse-psychology",
+          "illusion-of-choice",
+          "foot-in-the-door-technique",
+          "door-in-the-face-technique",
+          "low-ball-technique",
+          "mere-exposure-effect",
+          "narrative-persuasion",
+          "inoculation",
         ],
         sources: [
           "[Research review] Cialdini & Goldstein (2004), “Social influence: Compliance and conformity,” Annual Review of Psychology.",
@@ -3055,7 +3776,27 @@ export const TIERS: Tier[] = [
           "Write a timeline of the most important incidents, what they did, what emotional state they produced, and what support or exit option existed at each point.",
         checkpoint:
           "What specific behaviour would you need to see to treat the pattern as a clear threat rather than a misunderstanding?",
-        patterns: ["gaslighting", "isolation", "intermittent-reinforcement", "trauma-bonding"],
+        patterns: [
+          "gaslighting",
+          "isolation",
+          "intermittent-reinforcement",
+          "trauma-bonding",
+          "reverse-psychology",
+          "illusion-of-choice",
+          "false-binary-disruption",
+          "strategic-ambiguity",
+          "poison-metaphor",
+          "minimization",
+          "horn-effect",
+          "baiting",
+          "emotional-blackmail",
+          "triangulation",
+          "scapegoating",
+          "darvo",
+          "stonewalling",
+          "out-group-derogation",
+          "appeal-to-neutrality",
+        ],
         sources: [
           "[Academic book] Stark (2007), “Coercive Control: How Men Entrap Women in Personal Life.”",
           "[Clinical book] Herman (1992), “Trauma and Recovery: The Aftermath of Violence—from Domestic Abuse to Political Terror.”",
