@@ -1968,6 +1968,219 @@ export const PATTERNS: Pattern[] = [
     related: ["presupposition", "antithesis", "inoculation"],
   },
   {
+    slug: "rage-bait",
+    name: "Rage Bait",
+    domain: "Information Warfare",
+    signature:
+      "Content is framed to provoke anger or indignation and encourage rapid reaction, sharing, or engagement.",
+    mechanism:
+      "Emotionally charged framing can capture attention and travel quickly through social networks. The label describes an observable communication pattern; it does not establish the author's intent, and strong criticism is not automatically rage bait.",
+    seen: "Inflammatory headlines, clipped exchanges, or provocative posts that invite an immediate angry response before context is checked.",
+    counters: [
+      "Pause before reacting, reposting, or quote-sharing",
+      "Check the complete source and relevant context",
+      "Separate legitimate criticism from framing designed to provoke an emotional response",
+    ],
+    sources: [
+      "Research on emotion, online sharing, and platform engagement",
+      "Unpublished practitioner observation; a descriptive popular label, not a validated psychological construct",
+    ],
+    related: ["emotional-contagion", "baiting", "priming", "narrative-persuasion"],
+  },
+  {
+    slug: "opinion-shield",
+    name: "The Opinion Shield",
+    domain: "Communication",
+    signature:
+      "A speaker invokes personal opinion to deflect scrutiny of a factual claim or its consequences.",
+    mechanism:
+      "The move blurs the difference between a person's right to hold an opinion and whether the factual premises offered in its support are accurate. An opinion label alone neither proves nor disproves those premises.",
+    seen: "A challenge to a factual assertion is answered only with 'that's my opinion' or 'I'm entitled to my view,' without addressing the evidence.",
+    counters: [
+      "Acknowledge the right to an opinion while clarifying which parts are factual claims",
+      "Ask what evidence or reasoning supports those claims",
+      "Avoid treating disagreement itself as proof of bad intent",
+    ],
+    sources: [
+      "Argumentation and freedom-of-expression literature",
+      "Unpublished practitioner observation; a descriptive label, not a validated psychological construct",
+    ],
+    related: ["appeal-to-neutrality", "equivocation", "strategic-ambiguity"],
+  },
+  {
+    slug: "question-that-implies-guilt",
+    name: "The Question That Implies Guilt",
+    domain: "Communication",
+    signature:
+      "A question embeds an unverified accusation or assumption, making an answer seem like an admission of guilt.",
+    mechanism:
+      "The framing shifts attention from whether the allegation is established to how the person responds. Rejecting the premise or declining to answer may then be portrayed as suspicious, even though neither response proves guilt.",
+    seen: "Questions such as 'Why are you hiding it?' before concealment has been established, or 'When did you stop lying?'",
+    counters: [
+      "Identify and state the assumption embedded in the question",
+      "Ask for the specific evidence supporting the allegation",
+      "Answer only after the premise is clarified; do not treat a refusal or correction as proof",
+    ],
+    sources: [
+      "Rhetoric, pragmatics, and argumentation literature",
+      "Unpublished practitioner observation; a descriptive label, not a validated psychological construct",
+    ],
+    related: ["rhetorical-questions", "presupposition", "implication-and-insinuation"],
+  },
+  {
+    slug: "rumour-relay",
+    name: "The Rumour Relay",
+    domain: "Information Warfare",
+    signature:
+      "Unverified claims are passed along through a chain of people or accounts, with repetition mistaken for independent confirmation.",
+    mechanism:
+      "As a claim is repeated, its source and uncertainty can disappear. Multiple retellings may all trace back to the same unsupported origin, while social proof makes the claim feel increasingly credible.",
+    seen: "People cite 'everyone is saying' or repeat a claim from several posts that all rely on one anonymous or unverified source.",
+    counters: [
+      "Trace the claim to its earliest available source",
+      "Check whether apparent confirmations are genuinely independent",
+      "Label uncertainty clearly and avoid forwarding claims that could harm someone",
+    ],
+    sources: [
+      "Rumour transmission, misinformation, and social-network research",
+      "Unpublished practitioner observation; a descriptive label, not a validated psychological construct",
+    ],
+    related: [
+      "social-proof",
+      "triangulation",
+      "narrative-persuasion",
+      "omission-and-selective-disclosure",
+    ],
+  },
+  {
+    slug: "disclaimer-contradiction",
+    name: "The Disclaimer Contradiction",
+    domain: "Communication",
+    signature:
+      "A disclaimer denies an intention or meaning that the surrounding message continues to communicate or imply.",
+    mechanism:
+      "A disclaimer can create distance from a message without changing its practical effect. The mismatch may be meaningful, but it does not by itself prove a speaker's private intent; assess the words, context, and consequences separately.",
+    seen: "A person says 'no offence intended' while continuing a personal attack, or 'I'm not accusing anyone' before implying a specific person's wrongdoing.",
+    counters: [
+      "Compare the disclaimer with the concrete content and likely effect of the message",
+      "Ask the speaker to state the claim or concern directly",
+      "Describe the observable mismatch without claiming certainty about motive",
+    ],
+    sources: [
+      "Pragmatics, rhetoric, and communication literature",
+      "Unpublished practitioner observation; a descriptive label, not a validated psychological construct",
+    ],
+    related: ["equivocation", "strategic-ambiguity", "implication-and-insinuation"],
+  },
+  {
+    slug: "vague-target-accusation",
+    name: "The Vague-Target Accusation",
+    domain: "Communication",
+    signature:
+      "A serious accusation is directed at an unnamed or ambiguously identified person or group, inviting an audience to fill in the target.",
+    mechanism:
+      "Vagueness can spread suspicion while making the claim difficult to verify or answer. Different listeners may infer different targets, so an implication should not be treated as evidence against any particular person.",
+    seen: "Posts or remarks about 'someone in this room' or 'people like that' that imply misconduct without identifying a verifiable claim.",
+    counters: [
+      "Ask whether there is a specific, checkable allegation and an identifiable source",
+      "Do not guess or publicly name a target based on hints",
+      "Separate documented facts from audience speculation",
+    ],
+    sources: [
+      "Rhetoric, attribution, and communication literature",
+      "Unpublished practitioner observation; a descriptive label, not a validated psychological construct",
+    ],
+    related: ["implication-and-insinuation", "strategic-ambiguity", "out-group-derogation"],
+  },
+  {
+    slug: "insinuation-through-association",
+    name: "The Insinuation Through Association",
+    domain: "Communication",
+    signature:
+      "A person or claim is made to seem suspect through proximity or association with a discredited person, group, or idea rather than through direct evidence.",
+    mechanism:
+      "Association can transfer negative feelings between linked targets even when the relationship is incidental or the relevant claims differ. A connection alone does not establish shared beliefs, responsibility, or wrongdoing.",
+    seen: "Treating a person's acquaintance, employer, audience, or past collaboration as proof that they endorse or share another party's alleged conduct.",
+    counters: [
+      "State the alleged connection precisely and verify it",
+      "Ask for direct evidence linking the target to the specific claim",
+      "Distinguish contact, endorsement, shared responsibility, and mere proximity",
+    ],
+    sources: [
+      "Argumentation, social categorization, and rhetoric literature",
+      "Unpublished practitioner observation; a descriptive label, not a validated psychological construct",
+    ],
+    related: [
+      "implication-and-insinuation",
+      "out-group-derogation",
+      "steel-manning-and-straw-manning",
+    ],
+  },
+  {
+    slug: "selective-evidence-accusation",
+    name: "The Selective-Evidence Accusation",
+    domain: "Argumentation",
+    signature:
+      "A person is accused of cherry-picking evidence, sometimes accurately and sometimes as a way to dismiss their case without addressing it.",
+    mechanism:
+      "Selective presentation can distort a conclusion, but accusing someone of selectivity is not itself a rebuttal. The accusation needs to identify what was omitted and explain how the omitted evidence changes the assessment.",
+    seen: "A response says 'you're cherry-picking' but offers no missing evidence, or selectively highlights an opponent's omissions while ignoring the same issue in its own case.",
+    counters: [
+      "Ask which specific evidence is missing and why it matters",
+      "Compare the selection criteria and source quality on both sides",
+      "Revise the conclusion if relevant counter-evidence changes the balance",
+    ],
+    sources: [
+      "Argumentation, critical thinking, and evidence-evaluation literature",
+      "Unpublished practitioner observation; a descriptive label, not a validated psychological construct",
+    ],
+    related: [
+      "omission-and-selective-disclosure",
+      "confirmation-bias",
+      "steel-manning-and-straw-manning",
+    ],
+  },
+  {
+    slug: "borrowed-authority-accusation",
+    name: "The Borrowed-Authority Accusation",
+    domain: "Influence",
+    signature:
+      "A claim is challenged or endorsed by invoking someone's status or expertise without showing how that authority bears on the specific evidence.",
+    mechanism:
+      "Credentials and reputation can be relevant signals, but neither automatic proof nor proof of error. The move becomes misleading when status substitutes for examining the claim, the person's relevant expertise, or the underlying evidence.",
+    seen: "'A leading expert says so' with no source or relevant expertise, or 'that's just an appeal to authority' used to dismiss a qualified source without examining the evidence.",
+    counters: [
+      "Check the original statement, the source's relevant expertise, and any conflicts of interest",
+      "Evaluate the evidence independently where possible",
+      "Do not treat authority as either conclusive proof or automatic disqualification",
+    ],
+    sources: [
+      "Epistemology, expertise, and argumentation literature",
+      "Unpublished practitioner observation; a descriptive label, not a validated psychological construct",
+    ],
+    related: ["authority", "name-dropping", "prestige-signaling", "appeal-to-neutrality"],
+  },
+  {
+    slug: "repetition-and-amplification",
+    name: "The Repetition-and-Amplification Pattern",
+    domain: "Information Warfare",
+    signature:
+      "A message gains reach through repeated posting, quoting, or coordinated amplification, regardless of whether repetition adds new evidence.",
+    mechanism:
+      "Repeated exposure can increase familiarity, visibility, and perceived consensus. Repetition alone does not establish truth, independent corroboration, or coordination; each of those claims requires separate evidence.",
+    seen: "The same allegation appears across many accounts or channels, with reposts and references to its reach presented as proof of its accuracy.",
+    counters: [
+      "Trace repeated versions to their original sources",
+      "Distinguish new independent evidence from copies, quotes, and commentary",
+      "Assess claims on their evidence rather than their frequency or reach",
+    ],
+    sources: [
+      "Research on repetition, familiarity, misinformation, and online diffusion",
+      "Unpublished practitioner observation; a descriptive label, not a validated psychological construct",
+    ],
+    related: ["mere-exposure-effect", "social-proof", "priming", "rumour-relay"],
+  },
+  {
     slug: "antithesis",
     name: "Antithesis",
     domain: "Communication",
@@ -3418,6 +3631,7 @@ export const TIERS: Tier[] = [
           "affect-heuristic",
           "emotional-contagion",
           "expressive-suppression",
+          "rage-bait",
         ],
         sources: [
           "[Research review] Gross (1998), “The emerging field of emotion regulation: An integrative review,” Review of General Psychology.",
@@ -3548,6 +3762,8 @@ export const TIERS: Tier[] = [
           "ingroup-favoritism",
           "normative-and-informational-influence",
           "group-polarization",
+          "rumour-relay",
+          "repetition-and-amplification",
         ],
         sources: [
           "[Primary research] Asch (1955), “Opinions and social pressure,” Scientific American.",
@@ -3650,6 +3866,11 @@ export const TIERS: Tier[] = [
           "implication-and-insinuation",
           "equivocation",
           "omission-and-selective-disclosure",
+          "opinion-shield",
+          "question-that-implies-guilt",
+          "disclaimer-contradiction",
+          "vague-target-accusation",
+          "insinuation-through-association",
         ],
         sources: [
           "[Academic chapter] Clark & Brennan (1991), “Grounding in communication,” Perspectives on Socially Shared Cognition.",
@@ -3675,6 +3896,7 @@ export const TIERS: Tier[] = [
           "inoculation",
           "narrative-persuasion",
           "steel-manning-and-straw-manning",
+          "selective-evidence-accusation",
         ],
         sources: [
           "[Academic book] Walton & Krabbe (1995), “Commitment in Dialogue: Basic Concepts of Interpersonal Reasoning.”",
@@ -3710,6 +3932,7 @@ export const TIERS: Tier[] = [
           "name-dropping",
           "prestige-signaling",
           "appeal-to-neutrality",
+          "borrowed-authority-accusation",
         ],
         sources: [
           "[Foundational research] French & Raven (1959), “The bases of social power,” Studies in Social Power.",
@@ -3760,6 +3983,9 @@ export const TIERS: Tier[] = [
           "mere-exposure-effect",
           "narrative-persuasion",
           "inoculation",
+          "rage-bait",
+          "repetition-and-amplification",
+          "borrowed-authority-accusation",
         ],
         sources: [
           "[Research review] Cialdini & Goldstein (2004), “Social influence: Compliance and conformity,” Annual Review of Psychology.",
@@ -3796,6 +4022,15 @@ export const TIERS: Tier[] = [
           "stonewalling",
           "out-group-derogation",
           "appeal-to-neutrality",
+          "opinion-shield",
+          "question-that-implies-guilt",
+          "rumour-relay",
+          "disclaimer-contradiction",
+          "vague-target-accusation",
+          "insinuation-through-association",
+          "selective-evidence-accusation",
+          "borrowed-authority-accusation",
+          "repetition-and-amplification",
         ],
         sources: [
           "[Academic book] Stark (2007), “Coercive Control: How Men Entrap Women in Personal Life.”",
